@@ -1,13 +1,26 @@
 {
     "manifest_version": 3,
-    "name": "YouTube热点新闻监控",
+    "name": "YouTube热点搜索与AI摘要",
     "version": "1.0",
-    "description": "监控YouTube上特定行业的热点新闻",
+    "description": "搜索YouTube上的热点内容，用AI自动生成内容要点摘要",
     "permissions": ["storage", "activeTab", "scripting"],
     "background": {
         "service_worker": "background.js"
     },
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png",
+        "256": "icons/icon256.png"
     }
 }    

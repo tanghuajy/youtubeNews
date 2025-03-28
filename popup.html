@@ -3,13 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube热点新闻监控</title>
+    <title>YouTube热点搜索与AI摘要</title>
+    <style>
+        body {
+            width: 450px;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        input, select, button {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .news-container {
+            margin-top: 10px;
+        }
+        .news-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .loading {
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .feature-note {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>过去24小时热点新闻</h1>
-    <ul id="news-list-24h"></ul>
-    <h1>过去1小时热点新闻</h1>
-    <ul id="news-list-1h"></ul>
+    <div class="search-form">
+        <h1>YouTube热点搜索</h1>
+        <p class="feature-note">搜索结果会使用AI自动生成内容要点摘要</p>
+        <div class="form-row">
+            <label for="keyword">关键词:</label>
+            <input type="text" id="keyword" placeholder="输入关键词，如'比特币'">
+        </div>
+        <div class="form-row">
+            <label for="timeRange">时间范围:</label>
+            <select id="timeRange">
+                <option value="1h">过去1小时</option>
+                <option value="24h">过去24小时</option>
+            </select>
+        </div>
+        <button id="search-btn">搜索热点内容</button>
+    </div>
+
+    <div id="loading" class="loading">正在搜索并生成AI摘要，请稍候...</div>
+    
+    <div class="news-container">
+        <h1 id="results-title">热点内容及AI摘要</h1>
+        <ul id="news-list"></ul>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>    
