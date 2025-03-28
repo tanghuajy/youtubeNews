@@ -118,3 +118,10 @@
 - 添加保存搜索结果的功能
 - 优化AI提示，生成更准确的内容摘要
 - 支持更多语言的摘要生成 
+
+
+AI:
+https://aistudio.google.com/app/apikey
+
+YOUTUBE:
+https://console.cloud.google.com/apis/credentials?invt=AbtOMw&project=youtubenews-455106
